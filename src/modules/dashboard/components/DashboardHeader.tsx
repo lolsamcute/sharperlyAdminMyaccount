@@ -15,7 +15,7 @@ const DashboardHeader = () => {
   const [selectedFromCountry, setSelectedFromCountry] = useState("AUD");
 
   return (
-    <section className="font-poppins flex justify-between items-center mt-7.5">
+    <section className="font-poppins flex justify-between items-center">
       <div className="space-y-1.5">
         <HeadingOne text="Dashboard" />
         <p className="text-sm text-default-text"> Good Morning, Super Admin!</p>
@@ -28,7 +28,7 @@ const DashboardHeader = () => {
             value={selectedFromCountry}
             onValueChange={setSelectedFromCountry}
           >
-            <SelectTrigger className="w-30 rounded p-2 bg-white focus-visible:ring-0 focus:ring-transparent focus:border-0 shadow-none">
+            <SelectTrigger className="w-30 rounded-lg p-2 bg-white border border-gray-300 focus-visible:ring-0 focus:ring-transparent focus:border-primary shadow-none">
               <SelectValue placeholder="Select a country" className="" />
             </SelectTrigger>
             <SelectContent>
@@ -59,7 +59,7 @@ const DashboardHeader = () => {
             value={selectedToCountry}
             onValueChange={setSelectedToCountry}
           >
-            <SelectTrigger className="w-30 rounded p-2 bg-white focus-visible:ring-0 focus:ring-transparent focus:border-0 shadow-none">
+            <SelectTrigger className="w-30 rounded-lg p-2 bg-white border border-gray-300 focus-visible:ring-0 focus:ring-transparent focus:border-primary shadow-none">
               <SelectValue defaultValue={"NGN"} />
             </SelectTrigger>
             <SelectContent>
@@ -85,7 +85,7 @@ const DashboardHeader = () => {
           </Select>
         </div>
 
-        <div className="w-full max-w-41.5 rounded-x border-[1.5px] border-primary bg-white h-10 py-2 px-4 flex justify-center items-center gap-1">
+        <Button className="w-full max-w-41.5 rounded-lg border border-primary bg-white hover:bg-purple-50 h-10 py-2 px-4 flex justify-center items-center gap-2">
           <Icon
             width="24"
             height="24"
@@ -95,7 +95,7 @@ const DashboardHeader = () => {
           <span className="text-primary text-x font-medium">
             Generate Report
           </span>
-        </div>
+        </Button>
       </section>
     </section>
   );

@@ -15,35 +15,35 @@ const TransactionSummary = () => {
   const [selectedFromCountry, setSelectedFromCountry] = useState("AUD");
 
   return (
-    <section className="w-full flex-1 bg-off-white pt-5 pb-9.5 px-3 xl:px-8.5 rounded-x shadow-[0px_1.25px_1.88px_0px_#0000000D]">
+    <section className="w-full flex-1 bg-white pt-6 pb-8 px-6 rounded-lg border border-gray-100 shadow-sm">
       <section className="">
         <div className="space-y-1">
-          <h2 className="font-semibold text-lg text-charcoal">
+          <h2 className="font-semibold text-lg text-gray-900">
             Transaction Summary
           </h2>
-          <p className="text-cool-grey text-base -tracking-[2%] font-bold">
+          <p className="text-gray-600 text-base font-medium">
             $2,600,000.00
           </p>
         </div>
 
         <Tabs defaultValue="month" className="w-full">
           <section className="flex items-center justify-between mt-6">
-            <TabsList className="w-full max-w-45.5 space-x-2.5 rounded-x h-6 px-0 border-[0.63px] border-cloud-gray bg-white overflow-clip">
+            <TabsList className="w-full max-w-48 space-x-1 rounded-lg h-8 px-1 border border-gray-200 bg-gray-50 overflow-clip">
               <TabsTrigger
                 value="day"
-                className="text-smoky-black text-viii h-6 font-bold data-[state=active]:shadow-none flex justify-center items-center data-[state=active]:bg-leafy-green data-[state=active]:rounded-x data-[state=active]:text-white"
+                className="text-gray-700 text-xs h-6 font-medium data-[state=active]:shadow-none flex justify-center items-center data-[state=active]:bg-green-500 data-[state=active]:rounded-md data-[state=active]:text-white"
               >
                 Day
               </TabsTrigger>
               <TabsTrigger
                 value="week"
-                className="text-smoky-black text-viii h-6 font-bold data-[state=active]:shadow-none w-16 flex justify-center items-center data-[state=active]:bg-leafy-green data-[state=active]:rounded-x data-[state=active]:text-white"
+                className="text-gray-700 text-xs h-6 font-medium data-[state=active]:shadow-none w-16 flex justify-center items-center data-[state=active]:bg-green-500 data-[state=active]:rounded-md data-[state=active]:text-white"
               >
                 Week
               </TabsTrigger>
               <TabsTrigger
                 value="month"
-                className="text-smoky-black text-viii h-6 font-bold data-[state=active]:shadow-none w-16 flex justify-center items-center data-[state=active]:bg-leafy-green data-[state=active]:rounded-x data-[state=active]:text-white"
+                className="text-gray-700 text-xs h-6 font-medium data-[state=active]:shadow-none w-16 flex justify-center items-center data-[state=active]:bg-green-500 data-[state=active]:rounded-md data-[state=active]:text-white"
               >
                 Month
               </TabsTrigger>

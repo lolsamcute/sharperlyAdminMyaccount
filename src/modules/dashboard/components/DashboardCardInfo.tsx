@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const DashboardCardInfo = () => {
   return (
-    <section className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-5">
+    <section className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8">
       <InfoCard
         icon={
           <Icon
@@ -45,14 +45,12 @@ const DashboardCardInfo = () => {
       />
       <InfoCard
         icon={
-          <>
-            <img
-              width={20}
-              height={20}
-              alt="smallBidHammer"
-              src="https://res.cloudinary.com/sharperly/image/upload/v1754377188/Sharperly%20Admin/smallBidHammer_c3xyeg.svg"
-            />
-          </>
+          <Icon
+            width="18"
+            height="18"
+            color="var(--color-primary)"
+            icon="mdi:gavel"
+          />
         }
         sign="$"
         value={51292.79}
@@ -73,44 +71,25 @@ const DashboardCardInfo = () => {
       />
       <InfoCard
         icon={
-          <>
-            <img
-              width={20}
-              height={20}
-              alt="billPayment"
-              src="https://res.cloudinary.com/sharperly/image/upload/v1754377332/Sharperly%20Admin/billPayment_gmrl6u.svg"
-            />
-          </>
+          <Icon
+            width="18"
+            height="18"
+            color="var(--color-primary)"
+            icon="mdi:receipt"
+          />
         }
         sign="$"
         value={292.79}
-        label="Bill Payment (Airtel)"
-      />
-      <InfoCard
-        icon={
-          <>
-            <img
-              width={20}
-              height={20}
-              alt="billPayment"
-              src="https://res.cloudinary.com/sharperly/image/upload/v1754377332/Sharperly%20Admin/billPayment_gmrl6u.svg"
-            />
-          </>
-        }
-        sign="$"
-        value={342.79}
         label="Bill Payment (MTN)"
       />
       <InfoCard
         icon={
-          <>
-            <img
-              width={20}
-              height={20}
-              alt="billPayment"
-              src="https://res.cloudinary.com/sharperly/image/upload/v1754377332/Sharperly%20Admin/billPayment_gmrl6u.svg"
-            />
-          </>
+          <Icon
+            width="18"
+            height="18"
+            color="var(--color-primary)"
+            icon="mdi:receipt"
+          />
         }
         sign="$"
         value={392.79}

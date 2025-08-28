@@ -2,8 +2,8 @@ import WalletTransactionTrendChart from "./WalletTransactionTrendChart";
 
 const WalletTransactionTrends = () => {
   return (
-    <section className="w-full bg-white rounded-xl p-6 mt-8">
-      <h2 className="capitalize font-semibold text-xl text-primary2 leading-6">
+    <section className="w-full bg-white rounded-lg p-6 mt-8 border border-gray-100 shadow-sm">
+      <h2 className="font-semibold text-lg text-gray-900 leading-6">
         Wallet Transactions Trends
       </h2>
 

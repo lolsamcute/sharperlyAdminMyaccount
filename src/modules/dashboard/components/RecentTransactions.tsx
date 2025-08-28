@@ -63,10 +63,10 @@ const RecentTransactions = () => {
   ];
 
   return (
-    <section className="w-full bg-white mt-8 py-3.5 px-4 rounded-x space-y-6">
+    <section className="w-full bg-white mt-8 py-6 px-6 rounded-lg border border-gray-100 shadow-sm space-y-6">
       <div className="flex items-center justify-between">
         <TableHeading text="Recent Transactions" />
-        <span className="uppercase text-primary text-sm -tracking-[5%] font-bold">
+        <span className="uppercase text-primary text-sm font-bold cursor-pointer hover:text-primary/80">
           SEE ALL
         </span>
       </div>
