@@ -1,6 +1,5 @@
 import Detail from "@/components/common/Detail";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import UserProfileTabTop from "./UserProfileTabTop";
 
 const UserProfileTab = () => {
   return (
