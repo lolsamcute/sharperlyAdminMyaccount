@@ -1,45 +1,38 @@
 const PaymentMethodChartStat = () => {
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-          <span className="text-gray-700 text-sm font-medium">Bank Transfer (15%)</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="bg-gray-200 h-2 rounded-full w-24">
-            <div className="h-full w-4/5 bg-green-500 rounded-full"></div>
+    <section className="space-y-5.5 flex-1">
+      <section className="flex items-center gap-6">
+        <span className="block text-x text-black w-25">
+          Bank Transfer {"(15%)"}
+        </span>
+        <div className="flex items-center gap-4">
+          <div className="bg-surface-muted h-1 rounded overflow-clip w-35 min-[1440px]:w-40">
+            <div className="h-full w-3/4 bg-success-green" />
           </div>
-          <span className="text-gray-900 text-sm font-bold">15</span>
+          <span className="block text-black text-x font-bold">15</span>
         </div>
-      </div>
+      </section>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-4 h-4 bg-orange-500 rounded-full"></div>
-          <span className="text-gray-700 text-sm font-medium">PAY ID (10%)</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="bg-gray-200 h-2 rounded-full w-24">
-            <div className="h-full w-3/5 bg-orange-500 rounded-full"></div>
+      <section className="flex items-center gap-6">
+        <span className="block text-x text-black w-25">PAY ID {"(10%)"}</span>
+        <div className="flex items-center gap-4">
+          <div className="bg-surface-muted h-1 rounded overflow-clip w-35 min-[1440px]:w-40">
+            <div className="h-full w-2/4 bg-coral-accent" />
           </div>
-          <span className="text-gray-900 text-sm font-bold">10</span>
+          <span className="block text-black text-x font-bold">10</span>
         </div>
-      </div>
+      </section>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
-          <span className="text-gray-700 text-sm font-medium">Wallet (8%)</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="bg-gray-200 h-2 rounded-full w-24">
-            <div className="h-full w-1/4 bg-gray-600 rounded-full"></div>
+      <section className="flex items-center gap-6">
+        <span className="block text-x text-black w-25"> Wallet {"(8%)"} </span>
+        <div className="flex items-center gap-4">
+          <div className="bg-surface-muted h-1 rounded overflow-clip w-35 min-[1440px]:w-40">
+            <div className="h-full w-1/4 bg-deep-slate" />
           </div>
-          <span className="text-gray-900 text-sm font-bold">2</span>
+          <span className="block text-black text-x font-bold">2</span>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

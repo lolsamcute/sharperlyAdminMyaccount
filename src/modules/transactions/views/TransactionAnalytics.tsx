@@ -8,34 +8,49 @@ import PaymentMethod from "../components/PaymentMethod";
 
 const TransactionAnalytics = () => {
   return (
-    <section className="space-y-8">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <HeadingOne text="Transaction Analytics" />
-        
-        <div className="flex items-center gap-4">
-          <Tabs defaultValue="today" className="w-full">
-            <TabsList className="bg-gray-50 border border-gray-200 rounded-lg h-10 p-1">
+    <Tabs defaultValue="today" className="w-full">
+      <section className="space-y-4">
+        <section className="flex items-center justify-between w-full max-w-238.5">
+          <HeadingOne text="Transaction Analytics" />
+
+          <div className="flex gap-8 items-center">
+            <TabsList className="space-x-2.5 rounded-md h-10 overflow-clip bg-faint-lavender border-[0.5px] border-light-violet w-full max-w-45">
               <TabsTrigger
                 value="monthly"
-                className="text-gray-600 text-sm h-8 px-4 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm rounded-md font-medium"
+                className="text-default-text text-viii data-[state=active]:shadow-none w-16 flex justify-center h-6 items-center data-[state=active]:bg-off-white data-[state=active]:border data-[state=active]:border-misty-blue data-[state=active]:rounded-md data-[state=active]:text-medium-charcoal font-bold data-[state=active]:font-bold"
               >
                 Monthly
               </TabsTrigger>
               <TabsTrigger
                 value="weekly"
-                className="text-gray-600 text-sm h-8 px-4 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm rounded-md font-medium"
+                className="text-default-text text-viii data-[state=active]:shadow-none w-16 flex justify-center h-6 items-center data-[state=active]:bg-off-white data-[state=active]:border data-[state=active]:border-misty-blue data-[state=active]:rounded-md data-[state=active]:text-medium-charcoal font-bold data-[state=active]:font-bold"
               >
                 Weekly
               </TabsTrigger>
               <TabsTrigger
                 value="today"
-                className="text-gray-600 text-sm h-8 px-4 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm rounded-md font-medium"
+                className="text-default-text text-viii data-[state=active]:shadow-none w-16 flex justify-center h-6 items-center data-[state=active]:bg-off-white data-[state=active]:border data-[state=active]:border-misty-blue data-[state=active]:rounded-md data-[state=active]:text-medium-charcoal font-bold data-[state=active]:font-bold"
               >
                 Today
               </TabsTrigger>
             </TabsList>
 
+            <Button className="w-full max-w-41.5 rounded-x border-[1.5px] border-primary bg-white hover:bg-white h-10 py-2 px-4 flex justify-center items-center gap-1">
+              <Icon
+                width="24"
+                height="24"
+                icon="ri:file-pdf-2-line"
+                color="var(--color-primary)"
+              />
+              <span className="text-primary text-x font-medium">
+                Generate Report
+              </span>
+            </Button>
+          </div>
+        </section>
+
+        <section className="space-y-8 w-full max-w-250">
+          <div>
             <TabsContent value="monthly">
               <TransactionAnalyticsCardInfo />
             </TabsContent>
@@ -45,30 +60,20 @@ const TransactionAnalytics = () => {
             <TabsContent value="today">
               <TransactionAnalyticsCardInfo />
             </TabsContent>
-          </Tabs>
+          </div>
 
-          <Button className="border border-purple-600 text-purple-600 bg-white hover:bg-purple-50 px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
-            <Icon
-              width="20"
-              height="20"
-              icon="ri:file-pdf-2-line"
-              color="currentColor"
-            />
-            Generate Report
-          </Button>
-        </div>
-      </div>
+          <section className="flex gap-4">
+            <section className="bg-white rounded-x pt-9 pb-4 px-4 space-y-9 w-[49.65%]">
+              <TransactionTrendsChart />
+            </section>
 
-      {/* Charts Section */}
-      <div className="flex gap-6">
-        <div className="flex-1">
-          <TransactionTrendsChart />
-        </div>
-        <div className="w-96">
-          <PaymentMethod />
-        </div>
-      </div>
-    </section>
+            <section className="flex-1">
+              <PaymentMethod />
+            </section>
+          </section>
+        </section>
+      </section>
+    </Tabs>
   );
 };
 
