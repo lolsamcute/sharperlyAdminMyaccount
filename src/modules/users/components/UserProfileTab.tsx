@@ -269,4 +269,4 @@ const UserProfileTab = () => {
   );
 };
 
-export default UserProfileTabTop;
+export default UserProfileTab;
