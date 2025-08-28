@@ -20,6 +20,10 @@ const NotificationDropdown = ({ isOpen, onClose }: NotificationDropdownProps) =>
     setSelectedNotification(notification);
   };
 
+  const handleDropdownClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   const handleBackToList = () => {
     setSelectedNotification(null);
   };
@@ -40,7 +44,10 @@ const NotificationDropdown = ({ isOpen, onClose }: NotificationDropdownProps) =>
       <div className="fixed inset-0 bg-black/20 -z-10" onClick={handleClose} />
       
       {/* Dropdown */}
-      <div className="w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-[80vh] overflow-hidden">
+      <div 
+        className="w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-[80vh] overflow-hidden"
+        onClick={handleDropdownClick}
+      >
         {selectedNotification ? (
           // Individual notification detail view
           <div className="p-6">
