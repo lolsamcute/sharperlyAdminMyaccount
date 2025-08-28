@@ -14,7 +14,7 @@ const TransactionAnalytics = () => {
         <HeadingOne text="Transaction Analytics" />
         
         <div className="flex items-center gap-4">
-          <Tabs defaultValue="today" className="w-full">
+          <Tabs defaultValue="today">
             <TabsList className="bg-gray-50 border border-gray-200 rounded-lg h-10 p-1">
               <TabsTrigger
                 value="monthly"
@@ -35,19 +35,9 @@ const TransactionAnalytics = () => {
                 Today
               </TabsTrigger>
             </TabsList>
-
-            <TabsContent value="monthly">
-              <TransactionAnalyticsCardInfo />
-            </TabsContent>
-            <TabsContent value="weekly">
-              <TransactionAnalyticsCardInfo />
-            </TabsContent>
-            <TabsContent value="today">
-              <TransactionAnalyticsCardInfo />
-            </TabsContent>
           </Tabs>
 
-          <Button className="border border-purple-600 text-purple-600 bg-white hover:bg-purple-50 px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
+          <Button className="border border-purple-600 text-purple-600 bg-white hover:bg-purple-50 px-6 py-2 rounded-lg font-medium text-sm flex items-center gap-2">
             <Icon
               width="20"
               height="20"
@@ -58,6 +48,9 @@ const TransactionAnalytics = () => {
           </Button>
         </div>
       </div>
+
+      {/* Cards Section */}
+      <TransactionAnalyticsCardInfo />
 
       {/* Charts Section */}
       <div className="flex gap-6">
