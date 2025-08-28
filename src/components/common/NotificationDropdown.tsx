@@ -35,12 +35,12 @@ const NotificationDropdown = ({ isOpen, onClose }: NotificationDropdownProps) =>
   };
 
   return (
-    <div className="fixed inset-0 z-50">
+    <div className="absolute top-full right-0 z-50 mt-2">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/20" onClick={handleClose} />
+      <div className="fixed inset-0 bg-black/20 -z-10" onClick={handleClose} />
       
       {/* Dropdown */}
-      <div className="absolute top-20 right-4 w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-[80vh] overflow-hidden">
+      <div className="w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-[80vh] overflow-hidden">
         {selectedNotification ? (
           // Individual notification detail view
           <div className="p-6">

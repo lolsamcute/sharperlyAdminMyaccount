@@ -38,6 +38,11 @@ const TopBar = () => {
             color="var(--color-primary)"
             icon="clarity:notification-line"
           />
+          
+          <NotificationDropdown 
+            isOpen={isNotificationOpen} 
+            onClose={() => setIsNotificationOpen(false)} 
+          />
         </button>
       </section>
 
@@ -64,11 +69,6 @@ const TopBar = () => {
           className="-translate-x-4"
         />
       </section>
-
-      <NotificationDropdown 
-        isOpen={isNotificationOpen} 
-        onClose={() => setIsNotificationOpen(false)} 
-      />
     </section>
   );
 };
