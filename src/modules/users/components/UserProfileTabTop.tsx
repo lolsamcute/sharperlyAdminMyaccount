@@ -17,7 +17,7 @@ const UserProfileTabTop = () => {
   return (
     <section className="bg-white px-6 py-8 rounded-lg border border-gray-100 shadow-sm">
       {/* User Header Section */}
-      <div className="flex items-start justify-between mb-8">
+      <div className="flex items-center gap-8 mb-8">
         {/* User Info */}
         <div className="flex items-center gap-4">
           <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-orange-400 rounded-full flex items-center justify-center">
@@ -31,42 +31,39 @@ const UserProfileTabTop = () => {
           </div>
         </div>
 
-        {/* Balance Cards */}
-        <div className="flex items-center gap-6">
-          {/* Wallet Balance */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center">
-              <Icon
-                width={20}
-                height={20}
-                color="var(--color-primary)"
-                icon="fluent:wallet-credit-card-16-filled"
-              />
-            </div>
-            <div>
-              <div className="text-xl font-semibold text-gray-900">
-                ${userData.walletBalance.toLocaleString()}
-              </div>
-              <div className="text-sm text-gray-600">Wallet Balance</div>
-            </div>
+        {/* Wallet Balance */}
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-purple-50 rounded-full flex items-center justify-center">
+            <Icon
+              width={16}
+              height={16}
+              color="var(--color-primary)"
+              icon="fluent:wallet-credit-card-16-filled"
+            />
           </div>
+          <div>
+            <div className="text-xl font-semibold text-gray-900">
+              ${userData.walletBalance.toLocaleString()}
+            </div>
+            <div className="text-sm text-gray-600">Wallet Balance</div>
+          </div>
+        </div>
 
-          {/* Referral Balance */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center">
-              <Icon
-                width={20}
-                height={20}
-                color="var(--color-primary)"
-                icon="charm:person"
-              />
+        {/* Referral Balance */}
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-purple-50 rounded-full flex items-center justify-center">
+            <Icon
+              width={16}
+              height={16}
+              color="var(--color-primary)"
+              icon="charm:person"
+            />
+          </div>
+          <div>
+            <div className="text-xl font-semibold text-gray-900">
+              ${userData.referralBalance}
             </div>
-            <div>
-              <div className="text-xl font-semibold text-gray-900">
-                ${userData.referralBalance}
-              </div>
-              <div className="text-sm text-gray-600">Referral Balance</div>
-            </div>
+            <div className="text-sm text-gray-600">Referral Balance</div>
           </div>
         </div>
       </div>
