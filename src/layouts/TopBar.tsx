@@ -2,10 +2,18 @@ import { Icon } from "@iconify/react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
+import NotificationDropdown from "@/components/common/NotificationDropdown";
 
 const TopBar = () => {
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+
+  const toggleNotification = () => {
+    setIsNotificationOpen(!isNotificationOpen);
+  };
+
   return (
-    <section className="w-full flex items-center justify-between pl-9 pr-3 h-25.5">
+    <section className="w-full flex items-center justify-between pl-9 pr-3 h-25.5 relative">
       <section className="flex items-end gap-12.5">
         <div className="flex items-center justify-between bg-primary-4 border border-light-violet rounded px-5">
           <Input
@@ -16,7 +24,10 @@ const TopBar = () => {
           <Search size={14} color="var(--color-ash)" />
         </div>
 
-        <div className="size-9.5 relative bg-soft-lavender rounded-md flex justify-center items-center">
+        <button 
+          onClick={toggleNotification}
+          className="size-9.5 relative bg-soft-lavender rounded-md flex justify-center items-center hover:bg-purple-100 transition-colors"
+        >
           <Badge className="bg-warning size-5.5 text-white rounded-lx font-medium text-[10px] absolute -top-1.5 -right-1.5 font-inter">
             10
           </Badge>
@@ -27,7 +38,7 @@ const TopBar = () => {
             color="var(--color-primary)"
             icon="clarity:notification-line"
           />
-        </div>
+        </button>
       </section>
 
       <section className="flex items-center flex-1 justify-end">
@@ -53,6 +64,11 @@ const TopBar = () => {
           className="-translate-x-4"
         />
       </section>
+
+      <NotificationDropdown 
+        isOpen={isNotificationOpen} 
+        onClose={() => setIsNotificationOpen(false)} 
+      />
     </section>
   );
 };
