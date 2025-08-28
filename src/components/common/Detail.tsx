@@ -7,12 +7,12 @@ type DetailProps = {
 
 const Detail: React.FC<DetailProps> = ({ title, value }) => {
   return (
-    <div className="flex items-center gap-24">
-      <span className="block text-secondary-black text-sm w-full max-w-40">
+    <div className="flex items-start gap-8">
+      <span className="block text-gray-600 text-sm font-medium w-32 flex-shrink-0">
         {title}
       </span>
 
-      <div className="text-black-1 text-sm">{value}</div>
+      <div className="flex-1">{value}</div>
     </div>
   );
 };

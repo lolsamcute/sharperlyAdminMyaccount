@@ -3,43 +3,30 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const UserProfileTab = () => {
   return (
-    <section className="w-full">
-      <section className="space-y-4">
+    <section className="w-full bg-white rounded-lg p-6">
+      {/* User Details Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-12">
         <Detail
           title="Phone Number"
           value={
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2">
               <img
                 width={20}
                 height={20}
-                alt="country"
+                alt="Australia flag"
                 src="https://res.cloudinary.com/sharperly/image/upload/v1754313442/Sharperly%20Admin/australia_icon.svg"
               />
-              <span className="block text-black-1 text-sm">
+              <span className="text-gray-900 text-sm font-medium">
                 +61 4 1234 5678
               </span>
             </div>
           }
         />
-        {/* <div className="flex items-center gap-24">
-          <span className="block text-secondary-black text-sm w-full max-w-28">
-            Phone Number
-          </span>
-          <div className="flex items-center gap-2.5">
-            <img
-              width={20}
-              height={20}
-              alt="country"
-              src="https://res.cloudinary.com/sharperly/image/upload/v1754313442/Sharperly%20Admin/australia_icon.svg"
-            />
-            <span className="block text-black-1 text-sm">+61 4 1234 5678</span>
-          </div>
-        </div> */}
 
         <Detail
           title="Email Address"
           value={
-            <span className="block text-black-1 text-sm">
+            <span className="text-gray-900 text-sm font-medium">
               judithdimokechukwu@gmail.com
             </span>
           }
@@ -47,23 +34,29 @@ const UserProfileTab = () => {
 
         <Detail
           title="Date Joined"
-          value={<span className="block text-black-1 text-sm">2025-05-27</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">2025-05-27</span>
+          }
         />
 
         <Detail
           title="Date Of Birth"
-          value={<span className="block text-black-1 text-sm">2025-05-27</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">1988-05-27</span>
+          }
         />
 
         <Detail
           title="Gender"
-          value={<span className="block text-black-1 text-sm">Female</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">Female</span>
+          }
         />
 
         <Detail
           title="House Address"
           value={
-            <span className="block text-black-1 text-sm">
+            <span className="text-gray-900 text-sm font-medium">
               27 Koala Crescent, Sunnyvale
             </span>
           }
@@ -71,216 +64,209 @@ const UserProfileTab = () => {
 
         <Detail
           title="City"
-          value={<span className="block text-black-1 text-sm">Sydney</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">Sydney</span>
+          }
         />
 
         <Detail
           title="State"
           value={
-            <span className="block text-black-1 text-sm">New South Wales</span>
+            <span className="text-gray-900 text-sm font-medium">
+              New South Wales
+            </span>
           }
         />
 
         <Detail
           title="Country"
-          value={<span className="block text-black-1 text-sm">Australia</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">Australia</span>
+          }
         />
 
         <Detail
           title="Postal Code"
-          value={<span className="block text-black-1 text-sm">2000</span>}
+          value={
+            <span className="text-gray-900 text-sm font-medium">2000</span>
+          }
         />
 
         <Detail
           title="IP Address"
           value={
-            <span className="block text-black-1 text-sm">192.168.45.123</span>
+            <span className="text-gray-900 text-sm font-medium">
+              192.168.45.123
+            </span>
           }
         />
 
         <Detail
           title="Referral Code"
-          value={<span className="block text-primary text-sm">REF12345</span>}
+          value={
+            <span className="text-purple-600 text-sm font-medium">REF12345</span>
+          }
         />
 
         <Detail
           title="Send Amount Per Transaction"
           value={
-            <span className="block text-black-1 text-sm">$1000 - $1500 </span>
+            <span className="text-gray-900 text-sm font-medium">
+              $1000 - $1500
+            </span>
           }
         />
 
         <Detail
           title="Last Activity"
           value={
-            <span className="block text-black-1 text-sm">
+            <span className="text-gray-900 text-sm font-medium">
               2025-05-27 19:25pm
             </span>
           }
         />
-      </section>
+      </div>
 
-      <section className="flex gap-4 mt-17">
-        <div className="w-[47.5%] border border-highlight-purple px-4 py-5 rounded-lg space-y-8">
-          <h3 className="text-lg font-semibold text-charcoal">
+      {/* Transaction Volume and Wallet Information Cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Transaction Volume */}
+        <div className="border border-purple-200 rounded-lg p-6 bg-gray-50/50">
+          <h3 className="text-lg font-semibold text-gray-900 mb-6">
             Transaction Volume
           </h3>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width={16}
-                  height={16}
+                  width={20}
+                  height={20}
                   color="var(--color-primary)"
                   icon="fluent:wallet-credit-card-16-filled"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Wallet Balance
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
+              <span className="text-gray-900 text-lg font-semibold">
                 $5,292.79
               </span>
             </div>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="tdesign:money"
-                  color="var(--color-green2)"
+                  color="#10B981"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Referral Balance
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $20
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$20</span>
             </div>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="ri:star-s-line"
-                  color="var(--color-yellow2)"
+                  color="#F59E0B"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Influencer Referral Balance
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $0
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$0</span>
             </div>
           </div>
         </div>
 
-        <div className="w-[47.5%] border border-highlight-purple px-4 py-5 rounded-lg space-y-8">
-          <h3 className="text-lg font-semibold text-charcoal">
+        {/* Wallet Information */}
+        <div className="border border-purple-200 rounded-lg p-6 bg-gray-50/50">
+          <h3 className="text-lg font-semibold text-gray-900 mb-6">
             Wallet Information
           </h3>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="tdesign:money"
-                  color="var(--color-green2)"
+                  color="#10B981"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Total Transactions
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $6000
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$6000</span>
             </div>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="tdesign:money"
-                  color="var(--color-green2)"
+                  color="#10B981"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
-                  Transactions Today
+                <span className="text-gray-700 text-sm font-medium">
+                  Transaction Today
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $20
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$100</span>
             </div>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="tdesign:money"
-                  color="var(--color-green2)"
+                  color="#10B981"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Transactions This Week
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $20
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$300</span>
             </div>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
-                <Icon
-                  width="16"
-                  height="16"
-                  icon="tdesign:money"
-                  color="var(--color-green2)"
-                />
-                <span className="text-secondary-black text-xs font-medium block">
-                  Transactions This Month
-                </span>
-              </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $2000
+            <div className="flex items-center gap-3">
+              <Icon
+                width={20}
+                height={20}
+                icon="tdesign:money"
+                color="#10B981"
+              />
+              <span className="text-gray-700 text-sm font-medium">
+                Transactions This Month
               </span>
             </div>
+            <span className="text-gray-900 text-lg font-semibold">$1000</span>
 
-            <div className="flex justify-between items-center border border-grey-1 px-2 h-10 rounded-lg">
-              <div className="flex gap-2 items-center">
+            <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
+              <div className="flex items-center gap-3">
                 <Icon
-                  width="16"
-                  height="16"
+                  width={20}
+                  height={20}
                   icon="tdesign:money"
-                  color="var(--color-green2)"
+                  color="#10B981"
                 />
-                <span className="text-secondary-black text-xs font-medium block">
+                <span className="text-gray-700 text-sm font-medium">
                   Transactions This Year
                 </span>
               </div>
-
-              <span className="block text-secondary-black text-lg font-medium">
-                $30020
-              </span>
+              <span className="text-gray-900 text-lg font-semibold">$4000</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
 
-export default UserProfileTab;
+export default UserProfileTabTop;
